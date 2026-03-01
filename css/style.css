@@ -1,0 +1,226 @@
+  /*Cores baseadas no logo 
+    Azul escuro: #1f3a40 | Verde azulado: #4f8f8b | Azul claro: #b9dedd*/
+
+:root {
+      --dark: #1f3a40;
+      --primary: #4f8f8b;
+      --light: #b9dedd;
+      --bg: #f7f9f8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+    }
+
+
+    header {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 55px;
+      display: block;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      /* background: linear-gradient(135deg, var(--primary), var(--dark)); */
+      background: linear-gradient(135deg, #1e2d2b, #2f5f5c);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 850px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      background: white;
+      color: var(--dark);
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        background: var(--light);
+    }
+
+    section {
+      padding: 110px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .package {
+      border: 2px solid var(--primary);
+      padding: 40px;
+      border-radius: 25px;
+      background: white;
+      text-align: center;
+    }
+
+    .package h3 {
+      margin-bottom: 10px;
+    }
+
+    .destaque {
+      background: var(--dark);
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .destaque h3 {
+      color: white;
+    }
+
+    .destaque .package-list li::before {
+      color: var(--light);
+    }
+
+    .price {
+      font-size: 1.8rem;
+      margin: 20px 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .package-list {
+      list-style: none;       /* remove bolinhas */
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .package-list li {
+      padding-left: 25px;
+      margin-bottom: 12px;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .package-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.05);
+    }
+
+    /* @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+    } */
+
+    @media (max-width: 768px) {
+      .header-container {
+      padding: 15px 20px;
+    }
+
+    nav a {
+      margin-left: 12px;
+    }
+}
