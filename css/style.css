@@ -466,6 +466,7 @@
       box-shadow: 0 10px 25px rgba(31, 58, 64, 0.25);
       transition: 0.3s;
       z-index: 9999;
+      animation: pulse 2.5s infinite;
     }
 
     .whatsapp:hover {
@@ -476,7 +477,7 @@
       margin-left: 12px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .hero-container {
         flex-direction: column;
         text-align: center;
@@ -486,4 +487,28 @@
         width: 280px;
         margin-top: 40px;
       }
-}
+
+      .packages {
+        flex-direction: column;
+      }
+
+      .autoridade .services {
+        flex-direction: column;
+      }
+
+      .package,
+      .autoridade .card {
+        width: 100%;
+      }
+
+      .destaque {
+        transform: none;
+      }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+  
